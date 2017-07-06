@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <form class="" action="/" method="post">
+
+      <input type="text" name="name" value="" placeholder="Pokemon Name">
+      <input type="text" name="color" value="" placeholder="Color of Pokemon">
+      <input type="Number" name="level" value="" placeholder="Pokemon's level">
+
+      <selction class="types">
+        <input type="text" name="typeOne" value="" placeholder="Primary Type">
+        <input type="text" name="typeTwo" value="" placeholder="Secondary Type(if any)">
+      </selction>
+
+      <section class="select">
+        <div class="option-1">
+          <input type="radio" name="game" value="Red"> Red
+        </div>
+        <div class="option-1">
+          <input type="radio" name="game" value="Blue"> Blue
+        </div>
+        <div class="option-1">
+          <input type="radio" name="game" value="Gold"> Gold
+        </div>
+        <div class="option-1">
+          <input type="radio" name="game" value="Silver"> Silver
+        </div>
+        <div class="option-1">
+          <input type="radio" name="game" value="Ruby"> Ruby
+        </div>
+        <div class="option-1">
+          <input type="radio" name="game" value="Sapphire"> Sapphire
+        </div>
+        <div class="option-1">
+          <input type="radio" name="game" value="Not Mentioned"> Other games not mentioned
+        </div>
+      </section>
+
+      <input type="submit" name="" value="update">
+
+    </form>
+
+
+
+    <h1>welcome</h1>
+    {{#model}}
+    <h2>{{name}}</h2>
+    <div class="">
+      color: {{color}}
+    </div>
+    <div class="">
+      level: {{level}}
+    </div>
+    <h4>types</h4>
+    <ul>
+      {{#type}}
+        <li>{{typeOne}} {{typeTwo}}</li>
+      {{/type}}
+    </ul>
+    {{/model}}
+  </body>
+</html>
