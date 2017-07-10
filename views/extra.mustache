@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>welcome</h1>
+    {{#model}}
+    <p>{{name}}</p>
+    <div class="">
+      color: {{color}}
+    </div>
+    <div class="">
+      level: {{level}}
+    </div>
+    <h4>types</h4>
+    <ul>
+      {{#type}}
+        <li>{{typeOne}} {{typeTwo}}</li>
+      {{/type}}
+    </ul>
+    {{/model}}
+  </body>
+</html>
+    <h3>edit?</h3>
+    {{#model}}
+    <form class="" action="/edit/{{_id}}" method="post">
+        <input type="text" name="editName" placeholder="Edit Name">
+        <input type="text" name="editColor" placeholder="Edit Color">
+        <input type="integer" name="editLevel" placeholder="Edit level">
+        <input type="text" name="editType" placeholder="Edit Type">
+        <input type="text" name="editTypeTwo" placeholder="Edit 2ndType">
+
+        <input type="submit" name="submit" value="Submit">
+    </form>
+    {{/model}}
+    <h1>Delete</h1>
+    {{#model}}
+    <form class="" action="/delete/{{_id}}" method="post">
+      <input type="submit" name="delete" value="Delete">
+    </form>
+    {{/model}}
+  </body>
+</html>

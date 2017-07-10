@@ -1,14 +1,15 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title></title>
-</head>
-<body>
-  <form class="" action="/" method="post">
-
-    <input type="text" name="name" value="" placeholder="Pokemon Name">
-    <input type="text" name="color" value="" placeholder="Color of Pokemon">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>add to collection</h1>
+        <form class="" action="/add" method="post">
+    <input type="text" name="pokemonName" value="" placeholder="Pokemon Name">
+    <input type="text" name="Color" value="" placeholder="Color of Pokemon">
     <input type="Number" name="level" value="" placeholder="Pokemon's level">
 
     <selction class="types">
@@ -40,9 +41,16 @@
       </div>
     </section>
 
-     <input type="submit" name="submit" value="updatetable">
+     <input type="submit" name="submit" value="Add">
 
-  </form>
+    </form>
+    <h1>current collection</h1>
+    {{#model}}
+      <form class="" action="/extra/{{_id}}" method="post">
+          {{name}} {{color}}
+        <input type="submit" name="seeChanges" value="edit/delete">
+      </form>
 
-</body>
+    {{/model}}
+  </body>
 </html>
