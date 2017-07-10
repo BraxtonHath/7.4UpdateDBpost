@@ -16,10 +16,14 @@ module.exports = {
         result.level = req.body.editLevel;
       }
       if (req.body.editType) {
-        result.typeOne = req.body.editType;
+        console.log('editType', req.body.editType);
+        result.type.typeOne = req.body.editType;
       }
       if (req.body.editTypeTwo) {
-        result.typeTwo = req.body.editTypeTwo;
+        console.log('editTypeTwo', req.body.edit);
+        result.type.typeTwo = req.body.editTypeTwo;
+      }if (req.body.editGame) {
+        result.game = req.body.editGame;
       }
       result.save();
       res.redirect('/');

@@ -19,25 +19,25 @@
 
     <section class="select">
       <div class="option-1">
-        <input type="radio" name="game" value="Red"> Red
+        <input type="checkbox" name="game" value="Red"> Red
       </div>
       <div class="option-1">
-        <input type="radio" name="game" value="Blue"> Blue
+        <input type="checkbox" name="game" value="Blue"> Blue
       </div>
       <div class="option-1">
-        <input type="radio" name="game" value="Gold"> Gold
+        <input type="checkbox" name="game" value="Gold"> Gold
       </div>
       <div class="option-1">
-        <input type="radio" name="game" value="Silver"> Silver
+        <input type="checkbox" name="game" value="Silver"> Silver
       </div>
       <div class="option-1">
-        <input type="radio" name="game" value="Ruby"> Ruby
+        <input type="checkbox" name="game" value="Ruby"> Ruby
       </div>
       <div class="option-1">
-        <input type="radio" name="game" value="Sapphire"> Sapphire
+        <input type="checkbox" name="game" value="Sapphire"> Sapphire
       </div>
       <div class="option-1">
-        <input type="radio" name="game" value="Not Mentioned"> Other games not mentioned
+        <input type="checkbox" name="game" value="Not Mentioned"> Other games not mentioned
       </div>
     </section>
 
@@ -47,7 +47,7 @@
     <h1>current collection</h1>
     {{#model}}
       <form class="" action="/extra/{{_id}}" method="post">
-          {{name}} {{color}}
+          {{name}} {{level}}
         <input type="submit" name="seeChanges" value="edit/delete">
       </form>
 

@@ -7,7 +7,7 @@
   <body>
     <h1>welcome</h1>
     {{#model}}
-    <p>{{name}}</p>
+    <p>Name:{{name}}</p>
     <div class="">
       color: {{color}}
     </div>
@@ -20,6 +20,7 @@
         <li>{{typeOne}} {{typeTwo}}</li>
       {{/type}}
     </ul>
+      <p>{{game}}</p>
     {{/model}}
   </body>
 </html>
@@ -32,6 +33,29 @@
         <input type="text" name="editType" placeholder="Edit Type">
         <input type="text" name="editTypeTwo" placeholder="Edit 2ndType">
 
+        <section class="select">
+          <div class="option-1">
+            <input type="checkbox" name="editGame" value="Red"> Red
+          </div>
+          <div class="option-1">
+            <input type="checkbox" name="editGame" value="Blue"> Blue
+          </div>
+          <div class="option-1">
+            <input type="checkbox" name="editGame" value="Gold"> Gold
+          </div>
+          <div class="option-1">
+            <input type="checkbox" name="editGame" value="Silver"> Silver
+          </div>
+          <div class="option-1">
+            <input type="checkbox" name="editGame" value="Ruby"> Ruby
+          </div>
+          <div class="option-1">
+            <input type="checkbox" name="editGame" value="Sapphire"> Sapphire
+          </div>
+          <div class="option-1">
+            <input type="checkbox" name="editGame" value="Not Mentioned"> Other games not mentioned
+          </div>
+        </section>
         <input type="submit" name="submit" value="Submit">
     </form>
     {{/model}}
